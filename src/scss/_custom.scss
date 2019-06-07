@@ -1,0 +1,18 @@
+// Custom.scss
+
+// My Variable overrides
+
+$theme-colors: (
+  "primary": #778A8E,
+  "danger": #ff4136,
+  "light-shades": #E8E8EC,
+  "light-accent": #70665D,
+  "dark-accent": #7F5045,
+  "dark-shades": #2E2F38
+);
+
+$body-bg: #323232;
+$body-color: gray("900");
+
+// Bootstrap and its default variables
+@import "../../node_modules/bootstrap/scss/bootstrap";
