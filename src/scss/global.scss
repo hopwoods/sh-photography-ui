@@ -2,5 +2,71 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-    background-color: $body-bg;
-  }
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#container {
+  background-image:url('./../images/DarkFairy.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#app {
+  min-height: 93vh;
+}
+
+/* Navbar */
+#sidebar {
+  min-width: 15rem;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -15rem;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: gray("500");
+}
+#sidebar ul li a:hover {
+  color: gray("100");
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+}
+
+
+/* Footer */
+footer {
+  margin: 0;
+}

@@ -8,6 +8,14 @@ import { HomePage } from '../HomePage';
 import { AdminHomePage } from '../AdminHomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faSignInAlt)
+
+
 import './../scss/app.module'; 
 
 class App extends React.Component {
@@ -24,8 +32,8 @@ class App extends React.Component {
     render() {
         const { alert } = this.props;
         return (            
-                <div className="container">
-                    <div className="col-sm-8 col-sm-offset-2">
+                <div className="">
+                    <div className="col-sm-12">
                         {alert.message &&
                             <div className={`alert ${alert.type}`}>{alert.message}</div>
                         }
