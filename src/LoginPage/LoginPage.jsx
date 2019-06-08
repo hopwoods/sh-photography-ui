@@ -42,8 +42,8 @@ class LoginPage extends React.Component {
     const { loggingIn } = this.props;
     const { username, password, submitted } = this.state;
     return (
-      <div className="col-md-3">
-        <h2>Login</h2>
+      <div className="col-12 col-sm-5 col-lg-4">
+        <h5>Login</h5>
         <form name="form" onSubmit={this.handleSubmit}>
           <div
             className={

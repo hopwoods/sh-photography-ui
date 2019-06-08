@@ -1,70 +1,154 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway:300&display=swap');
+
+/* Mixins */
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
 body {
   background-color: $body-bg;
   color: $body-color;
+  font-family: 'Raleway', sans-serif;
 }
 
-a, a:hover, a:focus {
-  color: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a,
+a:hover,
+a:focus {
+  color: $white;
   text-decoration: none;
   transition: all 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-#container {
-  background-image:url('./../images/DarkFairy.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-#app {
-  min-height: 93vh;
-}
-
-/* Navbar */
-#sidebar {
-  min-width: 15rem;
-  min-height: 100vh;
-  text-align: center;
-  background-color: rgba($color: #000000, $alpha: 0.4);
-  transition: all 0.3s;
-}
-
-#sidebar.active {
-  margin-left: -15rem;
-}
-
-a[data-toggle="collapse"] {
+/* Site Logo */
+a#SiteLogo {
+  background-image:url('./../images/SH-Photography-Camera.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+  height: 5rem;
+  width: 25rem;
+  display:inline-block;
   position: relative;
+  left: -1rem;
+  top: 0.75rem;
 }
 
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+.nav-item a, .navbar-dark .navbar-nav .nav-link {
+  color: $white;
+  font-size: 1.1rem;
 }
 
-#sidebar .sidebar-header {
-  padding: 20px;
-}
-
-#sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
+.nav-item a:hover, .navbar-dark .navbar-nav .nav-link:hover{
   color: gray("500");
 }
-#sidebar ul li a:hover {
-  color: gray("100");
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    text-align: center;
+  }
+  .nav-link {
+    margin-right: 0.5rem;
+  }
+
+  #SiteLogo {
+    width: 18rem !important;
+    top: 1.25rem !important;
+  }
+}
+@media only screen and (max-width: 425px) {
+  
+  #SiteLogo {
+    left: 1rem !important;
+    width: 20rem !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 92%;
+  }
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-  color: #fff;
+@media only screen and (max-width: 375px) {
+  
+  #SiteLogo {
+    left: 0 !important;
+    width: 19rem !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 92%;
+  }
 }
 
+@media only screen and (max-width: 320px) {
+  
+  #SiteLogo {
+    left: 0 !important;
+    width: 16rem !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 92%;
+  }
+}
+
+/* Scrollbars */
+@include scrollbars(.25em, theme-color("dark-accent"), #191919);
+
+#container {
+  height: 93vh;
+}
+
+#content {
+  height: 75%;
+}
 
 /* Footer */
 footer {
