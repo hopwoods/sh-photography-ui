@@ -39,3 +39,6 @@ typings
 
 # Build Folder
 dist
+
+# VSCode Folder
+.vscode

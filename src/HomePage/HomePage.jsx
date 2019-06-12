@@ -1,23 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux'; 
-import { PhotoGallery } from './../_components/PhotoGallery';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { PhotoGallery } from "./../_components/PhotoGallery";
 class HomePage extends React.Component {
-  render() {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {    
     return (
       <div className="col-md-12">
-       <PhotoGallery />
+        <PhotoGallery margin={5} albumId={"AAG2u85M3p2Dny9K9WWUMtiVA-XauFLdb_6oaXbqdc7V0wST2DpiEzk9kgZYHQpduvOoXUbMFsl1"} />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-    return {
-       
-    };
+  return {};
 }
 
 const connectedHomePage = connect(mapStateToProps)(HomePage);
-export { connectedHomePage as HomePage }; 
+export { connectedHomePage as HomePage };

@@ -143,11 +143,20 @@ a#SiteLogo {
 @include scrollbars(.25em, theme-color("dark-accent"), #191919);
 
 #container {
-  height: 93vh;
+  min-height: 93vh;
 }
 
 #content {
-  height: 75%;
+  min-height: 75%;
+}
+
+/* Gallery */
+
+.react-photo-gallery--gallery img {
+  border-radius: 5px;
+}
+.react-photo-gallery--gallery img:hover {
+  box-shadow: 0px 0px 8px theme-color("dark-accent");
 }
 
 /* Footer */

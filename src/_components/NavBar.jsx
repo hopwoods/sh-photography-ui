@@ -39,10 +39,10 @@ export class NavBar extends React.Component {
           <div className="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
             <ul className="ml-auto nav navbar-nav">
               <li className="nav-item">
-                <a className="mr-3" target="_blank" href="https://www.instagram.com/hopwoods/">
+                <a className="mr-1 ml-1" target="_blank" href="https://www.instagram.com/hopwoods/">
                   <FontAwesomeIcon icon={["fab", "instagram"]} />
                 </a>
-                <a className="mr-3" href="/login">
+                <a className="mr-1 ml-1" href="/login">
                   <FontAwesomeIcon icon="sign-in-alt" />
                 </a>
               </li>

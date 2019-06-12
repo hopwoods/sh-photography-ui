@@ -1,11 +1,26 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./../_components/photos";
-
-export function PhotoGallery() {
+import { GetPhotoAlbum } from "./../_services/photos.service";
+export function PhotoGallery(props) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const [photos, setPhotos] = useState([]);
+  const [requestCount, setRequestCount] = useState(0);
+
+  const photosArray = () => {
+    if(requestCount < 1){
+      
+      GetPhotoAlbum(props.albumId).then(function(data) {
+        //console.log(data)
+        setRequestCount(1)
+        setPhotos(data)
+        
+      });
+    }
+  };
+
+  photosArray();
 
   const openLightbox = (event, obj) => {
     setCurrentImage(obj.index);
@@ -16,9 +31,9 @@ export function PhotoGallery() {
     setViewerIsOpen(false);
   };
 
-  return (
+   return (
     <div>
-      <Gallery photos={photos} onClick={openLightbox} />
+      <Gallery photos={photos} margin={props.margin} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
