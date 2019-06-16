@@ -1,26 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { GetPhotoAlbum } from "./../_services/photos.service";
+import nophotos from "./../images/no-image-icon-4.png";
 export function PhotoGallery(props) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
-  const [photos, setPhotos] = useState([]);
-  const [requestCount, setRequestCount] = useState(0);
+  const [photos, setPhotos] = useState([
+    {
+      src: nophotos,
+      width: 1,
+      height: 1
+    }
+  ]);
 
   const photosArray = () => {
-    if(requestCount < 1){
-      
-      GetPhotoAlbum(props.albumId).then(function(data) {
-        //console.log(data)
-        setRequestCount(1)
-        setPhotos(data)
-        
-      });
-    }
+    GetPhotoAlbum(props.albumId).then(function(data) {
+      setPhotos(data);
+    });
   };
 
-  photosArray();
+  useEffect(() => {
+    photosArray();
+    console.log("Getting Photos Gallery - On Component Load - Runs Once Only");
+  }, []); //Use Empty arrray knowing that an empty set does never change, the effect will run only once.
 
   const openLightbox = (event, obj) => {
     setCurrentImage(obj.index);
@@ -31,7 +34,7 @@ export function PhotoGallery(props) {
     setViewerIsOpen(false);
   };
 
-   return (
+  return (
     <div>
       <Gallery photos={photos} margin={props.margin} onClick={openLightbox} />
       <ModalGateway>

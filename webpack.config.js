@@ -47,7 +47,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,
+        test: /\.(png|jp(e*)g|svg|gif)$/,
         use: [
           {
             loader: "url-loader",
@@ -76,8 +76,7 @@ module.exports = {
   externals: {
     // global app config object
     config: JSON.stringify({
-      apiUrl: "https://localhost:44398/api",
-      googleApiUrl: "https://photoslibrary.googleapis.com/v1"      
+      apiUrl: "https://localhost:44398/api"
     })
   },
   resolve: {

@@ -7,10 +7,15 @@ class HomePage extends React.Component {
     super(props);
   }
 
-  render() {    
+  render() {
     return (
       <div className="col-md-12">
-        <PhotoGallery margin={5} albumId={"AAG2u85M3p2Dny9K9WWUMtiVA-XauFLdb_6oaXbqdc7V0wST2DpiEzk9kgZYHQpduvOoXUbMFsl1"} />
+        <PhotoGallery
+          margin={5}
+          albumId={
+            "AAG2u85M3p2Dny9K9WWUMtiVA-XauFLdb_6oaXbqdc7V0wST2DpiEzk9kgZYHQpduvOoXUbMFsl1"
+          }
+        />
       </div>
     );
   }
