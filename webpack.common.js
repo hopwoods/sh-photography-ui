@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  mode: "development",
   module: {
     rules: [
       {
@@ -72,12 +71,6 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true
-  },
-  externals: {
-    // global app config object
-    config: JSON.stringify({
-      apiUrl: "https://localhost:44398/api"
-    })
   },
   resolve: {
     extensions: [".js", ".jsx", ".scss"]
