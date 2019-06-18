@@ -1,13 +1,13 @@
 {
-  "name": "react-redux-registration-login-example",
+  "name": "Stuart-Hopwood-Photography",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornflourblue/react-redux-registration-login-example.git"
+    "url": "https://github.com/hopwoods/sh-photography-ui"
   },
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "dependencies": {
