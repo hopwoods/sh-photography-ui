@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./../scss/navbar.module";
-import "./../images/SH-Photography-Framed.png"
 export class NavBar extends React.Component {
   render() {
     return (
@@ -23,7 +22,12 @@ export class NavBar extends React.Component {
           </div>
           <ul className="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-3">
             <li className="nav-item">
-                <a id="SiteLogo" className="nav-link" title="Stuart Hopwood Photography Home" href="/"></a>
+              <a
+                id="SiteLogo"
+                className="nav-link"
+                title="Stuart Hopwood Photography Home"
+                href="/"
+              />
             </li>
             <button
               className="navbar-toggler ml-2 mr-2"
@@ -39,7 +43,11 @@ export class NavBar extends React.Component {
           <div className="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
             <ul className="ml-auto nav navbar-nav">
               <li className="nav-item">
-                <a className="mr-1 ml-1" target="_blank" href="https://www.instagram.com/hopwoods/">
+                <a
+                  className="mr-1 ml-1"
+                  target="_blank"
+                  href="https://www.instagram.com/hopwoods/"
+                >
                   <FontAwesomeIcon icon={["fab", "instagram"]} />
                 </a>
                 <a className="mr-1 ml-1" href="/login">

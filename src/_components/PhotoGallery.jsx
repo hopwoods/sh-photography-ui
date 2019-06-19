@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { GetPhotoAlbum } from "./../_services/photos.service";
-import nophotos from "./../images/no-image-icon-4.png";
+import loader from "./../images/Infinity-1s-200px.svg";
+
 export function PhotoGallery(props) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const [photos, setPhotos] = useState([
     {
-      src: nophotos,
+      src: loader,
       width: 1,
       height: 1
     }
