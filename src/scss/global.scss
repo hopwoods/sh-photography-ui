@@ -1,44 +1,16 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway:300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway:300&display=swap");
 
-/* Mixins */
-
-/// Mixin to customize scrollbars
-/// Beware, this does not work in all browsers
-/// @author Hugo Giraudel
-/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
-/// @param {Color} $foreground-color - Scrollbar's color
-/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
-/// @example scss - Scrollbar styling
-///   @include scrollbars(.5em, slategray);
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-  // For Google Chrome
-  ::-webkit-scrollbar {
-      width:  $size;
-      height: $size;
-  }
-
-  ::-webkit-scrollbar-thumb {
-      background: $foreground-color;
-  }
-
-  ::-webkit-scrollbar-track {
-      background: $background-color;
-  }
-
-  // For Internet Explorer
-  body {
-    scrollbar-face-color: $foreground-color;
-    scrollbar-track-color: $background-color;
-  }
+html {
+  font-size: calc(1em + 0.5vw);
 }
 
 body {
   background-color: $body-bg;
   color: $body-color;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 h1,
@@ -47,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a,
@@ -56,28 +28,30 @@ a:focus {
   color: $white;
   text-decoration: none;
   transition: all 0.3s;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* Site Logo */
 a#SiteLogo {
-  background-image:url('./../images/SH-Photography-Camera.png');
-  background-repeat:no-repeat;
+  background-image: url("./../images/SH-Photography-Camera.png");
+  background-repeat: no-repeat;
   background-size: contain;
   height: 5rem;
-  width: 25rem;
-  display:inline-block;
+  width: 21rem;
+  display: inline-block;
   position: relative;
-  left: -1rem;
-  top: 0.75rem;
+  left: -1.25rem;
+  top: 1.15rem;
 }
 
-.nav-item a, .navbar-dark .navbar-nav .nav-link {
+.nav-item a,
+.navbar-dark .navbar-nav .nav-link {
   color: $white;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.nav-item a:hover, .navbar-dark .navbar-nav .nav-link:hover{
+.nav-item a:hover,
+.navbar-dark .navbar-nav .nav-link:hover {
   color: gray("500");
 }
 
@@ -93,28 +67,13 @@ a#SiteLogo {
   }
 
   #SiteLogo {
-    width: 18rem !important;
-    top: 1.25rem !important;
+    width: 17rem !important;
+    top: 1.45rem !important;
   }
 }
 @media only screen and (max-width: 425px) {
-  
   #SiteLogo {
-    left: 1rem !important;
-    width: 20rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  
-  #SiteLogo {
-    left: 0 !important;
+    left: 0.25rem !important;
     width: 19rem !important;
   }
 
@@ -122,25 +81,42 @@ a#SiteLogo {
     margin-left: auto !important;
     margin-right: auto !important;
     width: 92%;
+    font-size: 1rem;
   }
 }
 
-@media only screen and (max-width: 320px) {
-  
+@media only screen and (max-width: 375px) {
   #SiteLogo {
     left: 0 !important;
-    width: 16rem !important;
+    width: 17rem !important;
   }
 
   .navbar-toggler {
     margin-left: auto !important;
     margin-right: auto !important;
     width: 92%;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #SiteLogo {
+    left: -0.75rem !important;
+    width: 16rem !important;
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 80%;
+    font-size: 1rem;
+    left: -0.75rem;
+    position: relative;
   }
 }
 
 /* Scrollbars */
-@include scrollbars(.25em, theme-color("dark-accent"), #191919);
+@include scrollbars(0.25em, theme-color("dark-accent"), #191919);
 
 #container {
   min-height: 93vh;

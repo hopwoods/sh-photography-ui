@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -21,9 +22,5 @@ class HomePage extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {};
-}
-
-const connectedHomePage = connect(mapStateToProps)(HomePage);
+const connectedHomePage = connect()(HomePage);
 export { connectedHomePage as HomePage };
