@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 
 var DIST_DIR = path.join(__dirname, "build");
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 //Serving the files on the dist folder
