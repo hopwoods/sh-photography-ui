@@ -3,17 +3,52 @@
 // My Variable overrides
 
 $theme-colors: (
-  "primary": #778A8E,
+  "primary": #778a8e,
   "danger": #ff4136,
-  "light-shades": #E8E8EC,
-  "light-accent": #C5D9AE,
-  "dark-accent": #7F5045,
-  "dark-shades": #2E2F38
+  "light-shades": #e8e8ec,
+  "light-accent": #c5d9ae,
+  "dark-accent": #7f5045,
+  "dark-shades": #2e2f38
 );
 
 $body-bg: #212121;
 $body-color: #878787;
 
+/* Mixins */
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";

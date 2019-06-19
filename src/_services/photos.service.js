@@ -6,9 +6,12 @@ export const GetPhotoAlbum = function(goolgeAlbumId) {
     headers: { "Content-Type": "application/json" }
   };
 
-  return fetch(`${config.apiUrl}/photos/getalbumphotos?albumId=${goolgeAlbumId}`, requestOptions)
-  .then(response => response.json())
-  .then(data => {
-    return data.photos
-  })
+  return fetch(
+    `${config.apiUrl}/photos/getalbumphotos?albumId=${goolgeAlbumId}`,
+    requestOptions
+  )
+    .then(response => response.json())
+    .then(data => {
+      return data.photos;
+    });
 };
