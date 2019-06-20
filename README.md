@@ -1,8 +1,8 @@
 <a href="[GitHub - hopwoods/sh-photography-ui: Front End UI for Stuart Hopwood Photography](https://github.com/hopwoods/sh-photography-ui)">
-    <img src="src/images/SH-Photography-Camera.png" alt="Logo" width="80" height="80">
+    <img src="src/images/SH-Photography-Camera.png" alt="Logo" style="marging-left: auto; margin-right:auto">
   </a>
 
-  <h3 align="center">Stuart Hopwood Photography UI</h3>
+  <h1 align="center">Stuart Hopwood Photography UI</h1>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
