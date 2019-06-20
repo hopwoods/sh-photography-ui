@@ -14,6 +14,9 @@ $theme-colors: (
 $body-bg: #212121;
 $body-color: #878787;
 
+$base-font-size: calc(1em + 0.5vw);
+$mobile-font-size: calc(1.5em + 1.5vw);
+
 /* Mixins */
 
 /// Mixin to customize scrollbars
