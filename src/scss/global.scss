@@ -7,6 +7,30 @@ html {
   font-size: calc(1em + 0.75vw);
 }
 
+@include media-breakpoint-up(xs) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
 body {
   background-color: $body-bg;
   color: $body-color;
