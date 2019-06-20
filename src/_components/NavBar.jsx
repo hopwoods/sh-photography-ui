@@ -7,7 +7,7 @@ export class NavBar extends React.Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-fixed-top navbar-dark main-nav p-0 mb-5">
         <div className="container-fluid p-0">
-          <div className="navbar-collapse collapse nav-content order-2">
+          <div className="navbar-collapse collapse nav-content order-2 text-center">
             <ul className="nav navbar-nav">
               <li className="nav-item active">
                 <a className="nav-link" href="/">
@@ -25,13 +25,13 @@ export class NavBar extends React.Component {
             <li className="nav-item">
               <a
                 id="SiteLogo"
-                className="nav-link"
+                className="nav-link img-fluid"
                 title="Stuart Hopwood Photography Home"
                 href="/"
               />
             </li>
             <button
-              className="navbar-toggler ml-2 mr-2 mt-4"
+              className="navbar-toggler w-100 ml-2 mr-2 mt-4"
               type="button"
               data-toggle="collapse"
               data-target=".nav-content"
@@ -41,7 +41,7 @@ export class NavBar extends React.Component {
               <span className="navbar-toggler-icon" />
             </button>
           </ul>
-          <div className="navbar-collapse collapse nav-content order-3 order-lg-3">
+          <div className="navbar-collapse collapse nav-content order-3 order-lg-3 text-center">
             <ul className="ml-auto nav navbar-nav">
               <li className="nav-item">
                 <a className="nav-link" href="/about">

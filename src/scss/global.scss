@@ -36,12 +36,20 @@ a#SiteLogo {
   background-image: url("./../images/SH-Photography-Camera.png");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 4rem;
-  width: 17rem;
+  height: 10vw;
+  width: 90vw;
   display: inline-block;
   position: relative;
   left: 0rem;
   top: 1rem;
+}
+
+@media (min-width: 992px) {
+  a#SiteLogo {
+    height: 10vw;
+    width: 40vw;
+    top: 1.25rem;
+  }
 }
 
 .nav-item a,
@@ -55,101 +63,11 @@ a#SiteLogo {
   color: gray("500");
 }
 
+.navbar-toggler {
+  font-size: 1.2rem;
+}
 .navbar-toggler:focus {
   outline: theme-color("dark-shades") thin solid;
-}
-
-@media screen and (max-width: 1025px) {
-  #SiteLogo {
-    width: 15rem !important;
-    top: 1.15rem !important;
-    position: relative;
-    left: 0rem !important;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .navbar-nav {
-    flex-direction: column;
-  }
-
-  .nav-item {
-    text-align: center;
-  }
-
-  .nav-link {
-    margin-right: 0.5rem;
-  }
-
-  #SiteLogo {
-    width: 32rem !important;
-    top: 1.45rem !important;
-    position: relative;
-    left: -1rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .navbar-nav {
-    flex-direction: column;
-  }
-  .nav-item {
-    text-align: center;
-  }
-
-  .nav-link {
-    margin-right: 0.5rem;
-  }
-
-  #SiteLogo {
-    width: 19rem !important;
-    top: 1.45rem !important;
-    position: relative;
-    left: -0.5rem !important;
-    height: 3rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  .navbar-nav {
-    flex-direction: column;
-  }
-  .nav-item {
-    text-align: center;
-  }
-
-  .nav-link {
-    margin-right: 0.5rem;
-  }
-
-  #SiteLogo {
-    width: 14rem !important;
-    top: 1.45rem !important;
-    position: relative;
-    left: -0rem !important;
-    height: 2rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 90%;
-    font-size: 0.9rem;
-  }
 }
 
 /* Scrollbars */
