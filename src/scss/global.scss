@@ -36,12 +36,20 @@ a#SiteLogo {
   background-image: url("./../images/SH-Photography-Camera.png");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 3.5rem;
-  width: 17rem;
+  height: 10vw;
+  width: 90vw;
   display: inline-block;
   position: relative;
   left: 0rem;
-  top: 0.7rem;
+  top: 1rem;
+}
+
+@media (min-width: 992px) {
+  a#SiteLogo {
+    height: 10vw;
+    width: 40vw;
+    top: 1.25rem;
+  }
 }
 
 .nav-item a,
@@ -55,104 +63,11 @@ a#SiteLogo {
   color: gray("500");
 }
 
+.navbar-toggler {
+  font-size: 1.2rem;
+}
 .navbar-toggler:focus {
   outline: theme-color("dark-shades") thin solid;
-}
-
-@media only screen and (max-width: 991.98px) {
-  .navbar-nav {
-    flex-direction: column;
-  }
-  .nav-item {
-    text-align: center;
-  }
-  .nav-link {
-    margin-right: 0.5rem;
-  }
-
-  #SiteLogo {
-    width: 24rem !important;
-    top: 1.45rem !important;
-    left: 1rem !important;
-    position: relative;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: column;
-  }
-  .nav-item {
-    text-align: center;
-  }
-  .nav-link {
-    margin-right: 0.5rem;
-  }
-
-  #SiteLogo {
-    width: 25rem !important;
-    top: 1.45rem !important;
-    left: 1rem !important;
-    position: relative;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  #SiteLogo {
-    left: -0.25rem !important;
-    width: 19rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  #SiteLogo {
-    left: -0.25rem !important;
-    width: 17rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 92%;
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  #SiteLogo {
-    left: -1.25rem !important;
-    width: 16rem !important;
-  }
-
-  .navbar-toggler {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 80%;
-    font-size: 1rem;
-    left: -0.75rem;
-    position: relative;
-  }
 }
 
 /* Scrollbars */
