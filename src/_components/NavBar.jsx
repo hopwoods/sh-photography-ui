@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./../scss/navbar.module";
 export class NavBar extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-fixed-top navbar-dark main-nav p-0 mb-5">
+      <nav className="navbar navbar-expand-lg navbar-fixed-top navbar-dark main-nav p-0 mb-5">
         <div className="container-fluid p-0">
           <div className="navbar-collapse collapse nav-content order-2">
             <ul className="nav navbar-nav">
@@ -14,13 +15,13 @@ export class NavBar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
+                <a className="nav-link" href="/portfolio">
+                  Portfolio
                 </a>
               </li>
             </ul>
           </div>
-          <ul className="nav navbar-nav text-nowrap flex-row mx-md-auto order-1 order-md-3">
+          <ul className="nav navbar-nav text-nowrap flex-row mx-sm-auto order-1 order-lg-3">
             <li className="nav-item">
               <a
                 id="SiteLogo"
@@ -30,7 +31,7 @@ export class NavBar extends React.Component {
               />
             </li>
             <button
-              className="navbar-toggler ml-2 mr-2"
+              className="navbar-toggler ml-2 mr-2 mt-4"
               type="button"
               data-toggle="collapse"
               data-target=".nav-content"
@@ -40,19 +41,26 @@ export class NavBar extends React.Component {
               <span className="navbar-toggler-icon" />
             </button>
           </ul>
-          <div className="ml-auto navbar-collapse collapse nav-content order-3 order-md-3">
+          <div className="navbar-collapse collapse nav-content order-3 order-lg-3">
             <ul className="ml-auto nav navbar-nav">
               <li className="nav-item">
-                <a
-                  className="mr-1 ml-1"
-                  target="_blank"
-                  href="https://www.instagram.com/hopwoods/"
-                >
-                  <FontAwesomeIcon icon={["fab", "instagram"]} />
+                <a className="nav-link" href="/about">
+                  About
                 </a>
-                <a className="mr-1 ml-1" href="/login">
-                  <FontAwesomeIcon icon="sign-in-alt" />
-                </a>
+              </li>
+              <li className="nav-item">
+                <span className="nav-link">
+                  <a
+                    className="mr-1 ml-1"
+                    target="_blank"
+                    href="https://www.instagram.com/hopwoods/"
+                  >
+                    <FontAwesomeIcon icon={["fab", "instagram"]} />
+                  </a>
+                  <a className="mr-1 ml-1" href="/login">
+                    <FontAwesomeIcon icon="sign-in-alt" />
+                  </a>
+                </span>
               </li>
             </ul>
           </div>
